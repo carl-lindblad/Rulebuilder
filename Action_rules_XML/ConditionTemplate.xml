@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rule>
+    <conditions>
+          <conditionGroup>
+ 			<condition expression="#{transaction.amount('EUR') ge 1000 }" />	
+		</conditionGroup>
+                <operator>AND</operator>
+		<conditionGroup>
+			<condition expression="#{transaction.code == 'CDPC'}" />	
+			<operator>OR</operator>
+			<condition expression="#{transaction.code == 'CMTS'}" />	
+			<operator>OR</operator>
+			<condition expression="#{transaction.code == 'CPBG'}" />	
+			<operator>OR</operator>
+			<condition expression="#{transaction.code == 'CDPE'}" />	
+        </conditionGroup>
+    </conditions>
+</rule>

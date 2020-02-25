@@ -1,0 +1,20 @@
+<rule>
+
+	<checkpoint type="SessionEnd"/>
+	<conditions>
+        <conditionGroup>
+            <condition expression="#{customer.type != 'Company'}" />
+        </conditionGroup>
+            <operator>AND</operator>
+        <conditionGroup bundlename="CashPayment"/>
+    </conditions>
+  <actions>
+        <action type="KYC">
+            <sub_action type="AmlReport">
+                <parameters>
+                    <parameter name="TYPE" val="LargeTransaction" />
+                </parameters>
+            </sub_action>
+        </action>
+    </actions>
+</rule>

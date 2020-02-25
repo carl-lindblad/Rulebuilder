@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rule>
+	<actions>
+		<action type="KYC">
+			<sub_action type="CustomerInfo">
+				<parameters>
+					<parameter name="companyName" val="READ" />
+					<parameter name="addressForNewBankCustomer" val="REQUIRED" />
+					<parameter name="taxCode" val="REQUIRED" />
+					<parameter name="sectorCode" val="REQUIRED" />
+				</parameters>
+			</sub_action>
+		</action>
+	</actions>
+</rule>

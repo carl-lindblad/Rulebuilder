@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<exported>
+    <rule>
+        <name>3-1-0-AddKYCinfo</name>
+        <type>A</type>
+        <active>true</active>
+        <ruleXml>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rule&gt;
+	&lt;actions&gt;
+&lt;!-- Currently, this action bundle is only same fields as KYCinfo. Can be expanded in the future --&gt;
+
+	        &lt;action bundlename="3-1-0-KYCinfoFields" /&gt;
+	&lt;/actions&gt;
+&lt;/rule&gt;</ruleXml>
+    </rule>
+</exported>
